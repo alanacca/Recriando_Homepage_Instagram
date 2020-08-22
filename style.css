@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243,243,243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;/*alinhamento vertical dos itens*/
+    justify-content: center;/*alinhamento horizontal dos itens*/
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instagram-phone img {
+    height: 600px;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center;/*Devido ao flex-direction: column,acontecendo tbm se fosse column reverse, a ordem foi alterada o align-items ficou na horizontal*/
+    justify-content: space-around;/*e o justify-content na vertical*/
+    flex-direction: column;
+    width: 50%;
+    min-height: 34ren;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;/*vertical*/
+    align-items: center;/*Horizontal*/
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    margin: 0.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+    /*o comando nth-child vai pegar os filhos do elemento especificado antes, por exemplo nesse caso, o elemento que era irá pegar será o primeiro elemento colocado na classe group que é aquele que tem a ft de perfil, o continue como alana_araujo79 e remover conta*/
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;/*No caso vai esconder a borda quadrada que ultrapassa o limite da div*/
+}
+
+.profile-photo img {
+    height: 6rem;
+    width: 6rem;
+}
+
+.instagram-login {
+    background-color: #0895F6;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: #0895F6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160,160,160);
+}
+
+.link-blue {
+    color: #0895F6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.get-app{
+    margin-bottom: 1rem;
+}
+
+.donwload {
+    display: flex;
+    width: 100%;
+    justify-content: center;/*mesmo espaço do lado e entre os elementos*/
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.app-download img { 
+    height: 4rem;
+}
+
+/*media queries*/
+
+@media(max-width:1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+
+    .group {
+        border: 1px solid transparent;
+    }
+}
